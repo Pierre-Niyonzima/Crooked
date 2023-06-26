@@ -1,0 +1,457 @@
+/* Table of content
+1.General - This is created general styles and overide some bootstrap classes.
+2.Layout
+ 2.1 Animations
+ 2.2 Buttons
+ 2.3 Thumbnail - overide bootstrap thumbnail and add mased efect
+ 2.4 Socail icons -style for social icons list
+3 Sections - definition for section and subsection
+ 3.1 Home
+ 3.2 movement
+ 3.3 methode
+ 3.4 About
+ 3.5 Price
+ 3.6 Contact
+ 3.7 Footer
+4 Responsive 
+**********************************************************************/
+
+.menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+.menu-icon .navicon:before {
+  top: 5px;
+}
+
+.menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.icon {
+  color: #fcc331;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  .navbar li {
+    float: left;
+  }
+  .navbar li a {
+    padding: 20px 30px;
+  }
+
+  .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* général */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: 400 18px/1.8 "Lato", sans-serif;
+  color: #777;
+  background: #181a1c;
+  position: relative;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5,
+.bgimg-6,
+.bgimg-7 {
+  background: #000;
+  min-height: 100vh;
+}
+
+.bgimg-1 {
+  background-image: url("../img/img_home.jpg");
+  background-position: right;
+  background-size: cover;
+}
+
+.bgimg-2 {
+  background-image: url("../img/img_move.jpg");
+  background-position: right;
+  background-size: cover;
+}
+
+.bgimg-3 {
+  background-image: url("../img/img_methode.jpg");
+  background-size: cover;
+}
+
+.bgimg-4 {
+  background-image: url("../img/img_aboutme.jpg");
+  background-position: right;
+  background-size: cover;
+}
+
+.bgimg-5 {
+  background-image: url("../img/img_price.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bgimg-6 {
+  background-image: url("../img/img_contact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bgimg-7 {
+  background-image: url("../img/img_massage.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.move-form {
+  max-height: 100vh;
+  overflow: auto;
+}
+
+/*  */
+
+@media (max-width: 960px) {
+  .bgimg-1 {
+    background-image: url("../img/img_home_960px.jpg");
+    background-position: unset;
+  }
+
+  .bgimg-2 {
+    background-image: url("../img/img_move_960px.jpg");
+    background-position: unset;
+  }
+
+  .bgimg-3 {
+    background-position: -200px;
+  }
+
+  .bgimg-4 {
+    background-image: url("../img/img_aboutme-960px.jpg");
+    background-position: unset;
+  }
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3,
+  .bgimg-4,
+  .bgimg-5,
+  .bgimg-6,
+  .bgimg-7 {
+    background-attachment: scroll;
+  }
+}
+
+.vertical-center {
+  height: 100vh;
+}
+
+.card {
+  block-size: fit-content;
+  border: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #181a1c;
+  text-transform: uppercase;
+}
+
+.card ul {
+  list-style: none;
+}
+.card li {
+  color: #747c89;
+  border-bottom: 1px solid #747c89;
+}
+
+.price {
+  font-size: 26px;
+  line-height: 35px;
+}
+
+/*
+3.7 Contact
+********************************************************************/
+.contact-form {
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 110;
+  position: relative;
+  margin: 25px;
+  padding: 20px;
+}
+
+.aboutme-form {
+  background: #fff;
+  background: rgba(23, 45, 44, 0.5);
+  z-index: 110;
+  position: relative;
+  padding: 20px;
+}
+
+.methode-form {
+  background: #fff;
+  background: rgb(142, 142, 142, 0.15);
+  z-index: 110;
+  position: relative;
+  padding: 20px;
+}
+
+.move-form {
+  background: #fff;
+  background: rgb(113, 145, 150, 0.5);
+  z-index: 110;
+  position: relative;
+  padding: 20px;
+}
+.contact-form h3 {
+  color: #838589;
+}
+
+/* scroll bar */
+
+.move-form::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 7px; /* width of the entire scrollbar */
+}
+
+.move-form::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #fcc331;
+}
+
+.move-form::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* color of the scroll thumb */
+  border: 3px solid rgb(0, 0, 0); /* creates padding around scroll thumb */
+}
+
+/*
+
+2.1 Animations
+**********/
+.zoom-in {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.zoom-in:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+}
+
+/*2. Layout
+**********************************************************************/
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  text-align: center;
+}
+/* Use this class if you want ceter element with span* class */
+.center {
+  float: none !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+.highlighted-box {
+  background: #f4f8f9;
+  padding: 20px 30px;
+}
+.highlighted-box h1 {
+  margin: 0px;
+}
+.large-text {
+  line-height: 1.2em;
+  font-size: 30px;
+  color: #181a1c;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.highlighted-box h1,
+.highlighted-box p {
+  color: #181a1c !important;
+}
+.circle-border {
+  display: inline-block;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+  -khtml-border-radius: 500px;
+  border: 3px solid #fff;
+}
+.left-align {
+  text-align: left;
+}
+.right-align {
+  text-align: left;
+}
+.error {
+  color: #cf0000;
+  display: none;
+}
+.invisibles {
+  display: none;
+  visibility: visible;
+}
+
+.navbar {
+  background: rgba(24, 26, 28, 0.8);
+  margin-bottom: 0;
+}
+
+.scrollup {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  border: 1px solid #fff;
+  display: none;
+}
+.scrollup > a {
+  position: relative;
+  color: #fff;
+}
+
+.carousel-indicators button {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 100%;
+  background-color: #fcc331 !important;
+}
+
+.text-warning {
+  color: #fcc331 !important;
+}
+
+.navbar-nav > li:hover > a,
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  color: #fcc331 !important;
+  transition: border-color 1s ease;
+  font-weight: bold;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class *
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+#Citation .carousel-caption {
+  bottom: 2rem;
+  z-index: 10;
+  font-size: 20px;
+}
+
+/* Declare heights because of positioning of img element */
+#Citation .carousel-item {
+  height: 14rem;
+}
+
+@media (max-width: 545px) {
+  #Citation .carousel-item {
+    height: 16rem;
+  }
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  #citation > .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}

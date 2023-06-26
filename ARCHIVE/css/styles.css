@@ -1,0 +1,235 @@
+
+/* Table of content
+1.General - This is created general styles and overide some bootstrap classes.
+2.Layout
+ 2.1 Animations
+ 2.2 Buttons
+ 2.3 Thumbnail - overide bootstrap thumbnail and add mased efect
+ 2.4 Socail icons -style for social icons list
+3 Sections - definition for section and subsection
+ 3.1 Home
+ 3.2 movement
+ 3.3 methode
+ 3.4 About
+ 3.5 Price
+ 3.6 Contact
+ 3.7 Footer
+4 Responsive 
+**********************************************************************/
+
+/* général */
+
+body, html {
+    height: 100vh;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+  } 
+
+
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {	
+    background: #000;	
+	background-attachment: fixed;	
+	background-repeat: no-repeat;	
+    min-height: 100vh; 
+    opacity: 0.9;
+}  
+  .bgimg-1 {
+    background-image: url("../img/img_home.jpg");
+    background-position: right;
+    background-size: contain;
+  }
+  
+  .bgimg-2 {
+    background-image: url("../img/img_move.jpg");  
+    background-position: right;
+    background-size: contain;
+  }
+
+  .bgimg-3 {
+    background-image: url("../img/img_methode.jpg");    
+    background-size: contain;   
+  }
+
+  .bgimg-4 {
+    background-image: url("../img/img_aboutme.jpg");
+    background-position: right;
+    background-size: contain;
+  }
+ 
+  .bgimg-5 {
+    background-image: url("../img/img_price.jpg");
+    background-size: cover;
+  }
+  
+  .bgimg-6 {
+    background-image: url("../img/img_contact.jpg");
+    background-size: cover;
+    background-position: bottom;
+  } 
+  .bgimg-7 {
+    background-image: url("../img/img_massage.jpg");
+    background-size: cover;
+  }
+
+
+
+  
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+      background-attachment: scroll;
+    }
+  }
+
+.card{
+    border: none; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;   
+}
+
+.card-header{
+    background-color:#181A1C;
+    text-transform:uppercase;    
+}
+
+.card ul{
+    list-style:none;
+
+}
+.card li{   
+    color:#747C89;    
+    border-bottom:1px solid #747C89;
+}
+.price {
+    font-size: 26px;  
+    line-height: 35px;
+}
+
+
+/*
+3.7 Contact
+********************************************************************/
+.contact-form {
+    background:#fff;
+    background: rgba(255, 255, 255, 0.9);
+    z-index:110;
+    position:relative;
+    margin-top:-25px;
+    padding:20px;
+}
+
+.contact-form h3 {
+    color:#838589;
+}
+
+
+/*
+
+2.1 Animations
+**********/
+.zoom-in {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.zoom-in:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+}
+
+
+/*2. Layout
+**********************************************************************/
+.centered {
+    margin-left:auto;
+    margin-right:auto;
+    float: none;
+    text-align: center;
+}
+/* Use this class if you want ceter element with span* class */
+ .center {
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+}
+.highlighted-box {
+    background:#F4F8F9;
+    padding:20px 30px;
+}
+.highlighted-box h1 {
+    margin:0px;
+}
+.large-text {
+    line-height:1.2em;
+    font-size: 30px;
+    color: #181A1C;
+    padding:20px;
+    margin-bottom:20px;
+}
+.highlighted-box h1, .highlighted-box p {
+    color: #181A1C !important;
+}
+.circle-border {
+    display: inline-block;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    -khtml-border-radius: 500px;
+    border: 3px solid #fff;
+}
+.left-align {
+    text-align:left;
+}
+.right-align {
+    text-align:left;
+}
+.error {
+    color: #CF0000;
+    display: none;
+}
+.invisibles {
+    display:none;
+    visibility:visible;
+}
+
+
+.navbar-dps {
+    background: #181A1C;
+    margin-bottom:0;
+    min-height:70px;
+    opacity: 0.5;
+}
+
+
+.scrollup {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border: 1px solid #fff;
+    display:none;
+    
+}
+.scrollup > a {
+    position:relative;
+    color:#fff;
+}
+
+.carousel-indicators button{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 100%;
+    background-color: #ffc107 !important;
+  }
