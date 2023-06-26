@@ -223,4 +223,19 @@ jQuery(document).ready(function ($) {
       }
     });
   });
+
+  // fonction pour fermer le menu déroulant quand cliqué
+  $("#hamburger-menu").on("click", toggleOnClass);
+
+  function toggleOnClass(event) {
+    var toggleElementId = "#" + $(this).data("toggle"),
+      element = $(toggleElementId);
+
+    element.toggleClass("on");
+  }
+
+  // close hamburger menu after click a
+  $(".prout li a").on("click", function () {
+    $("#hamburger-menu").click();
+  });
 });
