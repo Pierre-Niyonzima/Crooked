@@ -48,18 +48,18 @@
 
 
 <body class="text-white">
-    <nav class="navbar navbar-expand-lg navbar-dark d-none px-3 py-2" aria-label="Third navbar example">
+    <nav class="navbar navbar-expand-lg d-none navbar-dark py-0" aria-label="Third navbar example">
         <div class="container-fluid">
-            <a class="navbar-brand " href="#home">
+            <!-- <a class="navbar-brand " href="#home">
                 <img src="img\img_logoB.png" width="150" height="75" alt="Logo" />
-            </a>
+            </a> -->
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#top-navigation" aria-controls="top-navigation" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse collapse justify-content-end" id="top-navigation" style="">
+            <div class="navbar-collapse collapse justify-content-end py-0" id="top-navigation" style="">
                 <ul class="navbar-nav ">
                     <li class="nav-item pe-4"><a class="nav-link text-white" href="#Home">Home</a></li>
                     <li class="nav-item pe-4"><a class="nav-link text-white" href="#Move">Le Mouvement</a></li>
@@ -72,6 +72,7 @@
             </div>
         </div>
     </nav>
+    
     <div id="Home" class="container-fluid bgimg-1">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -87,7 +88,7 @@
 
     <div id="Move" class="container-fluid bgimg-2 overflow-hidden">
         <div class="row gy-4 justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-8 col-">
                 <div class="p-lg-5 p-3">
                     <div class="methode-form text-justify move-form">
                         <h2 class="text-center mb-5">Qu’est-ce que le Mouvement ?</h2>
@@ -135,13 +136,13 @@
         </div>
     </div>
 
-    <div id="Citation" class="carousel slide h-30" data-bs-ride="carousel">
+    <div id="Citation" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="carousel-caption">
                     <div>
                         <figure class="text-center">
-                            <h3 class="fs-6">“LE VIEILLISEMENT DEVRAIT ÊTRE ACCEPTÉ, L’ÂGE IGNORÉ.”</h3>
+                            <h3 class="fs-5">“LE VIEILLISEMENT DEVRAIT ÊTRE ACCEPTÉ, L’ÂGE IGNORÉ.”</h3>
                         </figure>
                         <figcaption class="blockquote-footer text-end">
                             <cite title="Source Title">Ido PORTAL</cite>
@@ -154,7 +155,7 @@
                 <div class="carousel-caption">
                     <figure class="text-center">
                         <figure class="text-center">
-                            <h3 class="fs-6">“ON N’ENSEIGNE PAS CE QUE L’ON SAIT, ON ENSEIGNE CE QUE L’ON EST.”</h3>
+                            <h3 class="fs-5">“ON N’ENSEIGNE PAS CE QUE L’ON SAIT, ON ENSEIGNE CE QUE L’ON EST.”</h3>
                         </figure>
                         <figcaption class="blockquote-footer text-end">
                             <cite title="Source Title">Aton</cite>
@@ -168,7 +169,7 @@
                     <div class="carousel-caption">
                         <figure class="text-center ">
                             <blockquote class="blockquote">
-                                <h3 class="fs-6">“RIEN N’EST OBLIGATOIRE MAIS TOUT EST VITAL.”</h3>
+                                <h3 class="fs-5">“RIEN N’EST OBLIGATOIRE MAIS TOUT EST VITAL.”</h3>
                             </blockquote>
                             <figcaption class="blockquote-footer text-end">
                                 <cite title="Source Title">Christophe CARRIO</cite>
@@ -191,7 +192,7 @@
 
     <div id="Methode" class="container-fluid bgimg-3 overflow-hidden">
         <div class="row gy-4 justify-content-end">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="p-lg-5 p-3 ">
                     <div class=" methode-form text-justify move-form">
                         <p class="mb-4">
@@ -226,7 +227,7 @@
 
     <div id="About" class="container-fluid bgimg-4 overflow-hidden">
         <div class="row gy-4 ">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="p-lg-5 p-3">
                     <!--h1 class="text-center mb-5">À propos</h1-->
                     <div class="aboutme-form text-justify move-form">
@@ -291,8 +292,8 @@
     </div>
 
     <div id="Price" class="bgimg-5 d-flex justify-content-center">
-        <div class="col-lg-6">
-            <div id="cours" class="carousel slide carousel p-lg-5" data-ride="carousel">
+        <div class="col-lg-8">
+            <div id="cours" class="carousel slide carousel mt-5" data-ride="carousel">
                 <div class="carousel-indicators sticky-top">
                     <button type="button" data-bs-target="#cours" data-bs-slide-to="0" class="p-1 m-1 active"
                         aria-current="true" aria-label="duo - trio"></button>
@@ -380,8 +381,7 @@
 
 
     <div id="Massages" class="bgimg-7 overflow-hidden">
-        <div
-            class="container-fluid d-flex flex-wrap gy-4 p-lg-5 p-3 ">
+        <div class="container-fluid d-flex flex-wrap justify-content-center gy-4 p-lg-5 p-3 ">
             <div class="col-lg-6 mt-5 p-lg-5">
                 <div class="methode-form move-form text-center mt-4 p-lg-5" id="diplome">
                     <p>En complément de mon diplôme de coach sportif, j’ai souhaité développer mes compétences à
@@ -402,7 +402,7 @@
 
             </div>
             <div class="col-lg-6">
-                <div id="soins" class="carousel slide carousel slide  p-lg-5" data-bs-ride="#soins">
+                <div id="soins" class="carousel slide carousel slide mt-5" data-bs-ride="#soins">
                     <div class="carousel-indicators sticky-top ">
                         <button type="button" data-bs-target="#soins" data-bs-slide-to="0" class="p-1 m-1 active"
                             aria-current="true" aria-label="Suedois – Deep Tissue"></button>
