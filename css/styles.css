@@ -163,14 +163,14 @@ body {
 }
 
 .bgimg-6 {
-  background-image: url("../img/img_contact.jpg");
+  background-image: url("../img/img_massage.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
 .bgimg-7 {
-  background-image: url("../img/img_massage.jpg");
-  background-attachment: fixed;
+  background-image: url("../img/img_contact.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -204,7 +204,7 @@ body {
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
+/* @media only screen and (max-device-width: 1024px) {
   .bgimg-1,
   .bgimg-2,
   .bgimg-3,
@@ -214,7 +214,7 @@ body {
   .bgimg-7 {
     background-attachment: scroll;
   }
-}
+} */
 
 .vertical-center {
   height: 100vh;
@@ -232,6 +232,9 @@ body {
   background-color: #181a1c;
   text-transform: uppercase;
 }
+.card-body {
+  padding-top: 5px;
+}
 
 .card ul {
   list-style: none;
@@ -242,8 +245,8 @@ body {
 }
 
 .price {
-  font-size: 26px;
-  line-height: 35px;
+  font-size: 22px;
+  line-height: 20px;
 }
 
 /*
@@ -380,8 +383,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-  background: rgba(24, 26, 28, 0.8);
-  margin-bottom: 0;
+  background: rgba(24, 26, 28, 0.9);
 }
 
 .scrollup {
@@ -453,5 +455,16 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
     line-height: 1.4;
+  }
+}
+
+/* responsive portable card */
+@media (max-width: 576px) {
+  .card {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 18px;
   }
 }
