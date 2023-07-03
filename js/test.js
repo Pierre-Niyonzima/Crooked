@@ -185,6 +185,7 @@ jQuery(document).ready(function ($) {
 
     return false; // stops user browser being directed to the php file
   });
+
   //Animate price columns
   jQuery(".card, .testimonial").on("inview", function (event, visible) {
     if (visible == true) {
@@ -204,26 +205,6 @@ jQuery(document).ready(function ($) {
   });
   //Animate price columns
 
-  //   jQuery("#Shema, #diplome, #prout").on("inview", function (event, visible) {
-  //     if (visible == true) {
-  //       jQuery(this).addClass("animated fadeIn");
-  //     } else {
-  //       jQuery(this).removeClass("animated fadeIn");
-  //     }
-  //   });
-
-  $(document).ready(function () {
-    $(window).scroll(function () {
-      var windowHeight = $(window).height();
-      var scrollHeight = $(window).scrollTop();
-      var divOffset = $("#Schema").offset().top;
-
-      if (scrollHeight + windowHeight >= divOffset) {
-        $("#Schema").fadeOut();
-      }
-    });
-  });
-
   // fonction pour fermer le menu déroulant quand cliqué
   if ($(window).width() < 992) {
     $("#hamburger-menu").on("click", toggleOnClass);
@@ -239,5 +220,46 @@ jQuery(document).ready(function ($) {
     $(".menu-close li a").on("click", function () {
       $("#hamburger-menu").click();
     });
+  }
+
+  // fetch API instagram
+
+  const url =
+    "https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=IGQVJXdllSN0loUmt4YnhsN1psVzMzYmZAUYUpKSGJxNi1ieDRzcW12ZAEVNZA0FYLUxPX1l2bmtYRm9jaFhIUk1nVHA0dlBWSzNUYWk5R1BCUzZASYWFTalU5MEFlc2s4b1lVVExrUnZAqdTdJOVZATYkxWLQZDZD";
+
+  fetch(url)
+    .then((response) => response.json())
+    .then(function (data) {
+      array = data.data;
+      instaPics(array);
+      console.log(array);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
+  function instaPics(pics) {
+    for (let i = 0; i < pics.length; i++) {
+      console.log(pics[i]);
+
+      if (pics[i].media_type == "VIDEO") {
+        var onepics = document.createElement("video");
+        onepics.setAttribute("src", pics[i].media_url);
+        onepics.setAttribute("type", "video/webm");
+        document.getElementById("insta").appendChild(onepics);
+      } else {
+        var onepics = document.createElement("img");
+        onepics.setAttribute("src", pics[i].media_url);
+        document.getElementById("insta").appendChild(onepics);
+      }
+
+      // var createArticle = document.createElement("article");
+      // onepics.appendChild(createArticle);
+
+      // var createH1 = document.createElement("h1");
+      // createH1.className = "pics[i]Name";
+      // createH1.textContent = pics[i].id;
+      // document.getElementById("insta").appendChild(createH1);
+    }
   }
 });

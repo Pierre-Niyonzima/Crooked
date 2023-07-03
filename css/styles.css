@@ -156,7 +156,7 @@ body {
 }
 
 .bgimg-5 {
-  background-image: url("../img/img_price.png");
+  background-image: url("../img/img_price.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -180,6 +180,24 @@ body {
   overflow: auto;
 }
 
+.insta {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.insta video {
+  height: 100%;
+}
+
+.insta img {
+  height: 100%;
+}
+
+.sk-ig-all {
+  width: 25px;
+}
 /*  */
 
 @media (max-width: 960px) {
@@ -303,6 +321,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(0, 0, 0); /* color of the scroll thumb */
   border: 3px solid rgb(0, 0, 0); /* creates padding around scroll thumb */
+}
+
+.flocker-slideshow {
+  margin-bottom: none;
 }
 
 /*
@@ -465,6 +487,14 @@ body::-webkit-scrollbar-thumb {
   }
 
   .price {
+    font-size: 18px;
+  }
+
+  .icon {
+    font-size: 45px;
+  }
+
+  .text-icon {
     font-size: 18px;
   }
 }
